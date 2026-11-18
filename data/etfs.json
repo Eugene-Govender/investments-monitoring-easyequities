@@ -1,0 +1,708 @@
+{
+  "metadata": {
+    "title": "Investments Monitoring — EasyEquities ETF Intelligence",
+    "version": "1.0.0",
+    "lastUpdated": "2026-11-18",
+    "currencyBaseZAR": "ZAR",
+    "currencyBaseUSD": "USD",
+    "usdZarRate": 18.25,
+    "description": "Verified Minimum Disclosure Document (MDD) data for premier ETFs available on EasyEquities JSE and US accounts."
+  },
+  "etfs": [
+    {
+      "id": "easyge",
+      "ticker": "EASYGE",
+      "isin": "ZAE000310526",
+      "name": "EasyETFs Global Equity Actively Managed ETF",
+      "issuer": "EasyAssetManagement",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "ASISA Global – Equity – General Category Average",
+      "underlyingAsset": "Actively managed global equity basket (quantitative momentum/value strategy)",
+      "category": "Global Developed",
+      "assetClass": "Global Equity (Active)",
+      "inceptionDate": "2024-11-22",
+      "ter": 0.78,
+      "tc": 0.17,
+      "tic": 0.95,
+      "fundSizeZarMillions": 320,
+      "distributionFrequency": "Annual",
+      "dividendYield": 0.40,
+      "returns": {
+        "oneYear": null,
+        "threeYearAnnualized": null,
+        "fiveYearAnnualized": null
+      },
+      "note": "Listed November 2024. Insufficient track record for 1Y/3Y/5Y annualized return reporting. Monitor MDD quarterly.",
+      "riskRating": "Aggressive / High",
+      "top10Holdings": [
+        { "name": "Foreign Equities (basket)", "weight": 95.2 },
+        { "name": "Foreign Cash / Liquidity", "weight": 4.8 },
+        { "name": "N/A — holdings not individually disclosed", "weight": 0 },
+        { "name": "N/A", "weight": 0 },
+        { "name": "N/A", "weight": 0 },
+        { "name": "N/A", "weight": 0 },
+        { "name": "N/A", "weight": 0 },
+        { "name": "N/A", "weight": 0 },
+        { "name": "N/A", "weight": 0 },
+        { "name": "N/A", "weight": 0 }
+      ],
+      "sectors": [
+        { "name": "Foreign Equities", "weight": 95.2 },
+        { "name": "Foreign Cash", "weight": 4.8 }
+      ],
+      "geography": [
+        { "region": "Global (Undisclosed Basket)", "weight": 95.2 },
+        { "region": "Cash / Liquidity", "weight": 4.8 }
+      ],
+      "whyItRanks": "EasyEquities' own proprietary actively managed global ETF. Uses a quantitative momentum and value ranking system (by Portfolio Manager Shaun Krom) to select international blue-chip equities. Brand-new listing (Nov 2024) — too early for a full trailing return track record.",
+      "pros": [
+        "TFSA eligible for full tax-free compounding",
+        "Actively managed with quantitative momentum and value factors",
+        "EasyEquities' own product — deeply integrated on the platform"
+      ],
+      "risks": [
+        "Highest TER in the lineup at 0.78% (TIC: 0.95%) — significantly more expensive than passive peers",
+        "No verifiable 1Y, 3Y, or 5Y annualized track record yet (launched Nov 2024)",
+        "Active management introduces manager selection risk vs. index-tracking alternatives"
+      ],
+      "idealInvestor": "EasyEquities loyalists who want an actively managed global equity tilt inside their TFSA and are comfortable with higher fees in exchange for potential active alpha. Best monitored closely once a 1Y track record is established."
+    },
+    {
+      "id": "stxwdm",
+      "ticker": "STXWDM",
+      "isin": "ZAE000246104",
+      "name": "Satrix MSCI World Feeder ETF",
+      "issuer": "Satrix",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "MSCI World Index (USD)",
+      "underlyingAsset": "Amundi Core MSCI World UCITS ETF / iShares MSCI World",
+      "category": "Global Developed",
+      "assetClass": "Global Equity",
+      "inceptionDate": "2017-07-25",
+      "ter": 0.35,
+      "tc": 0.01,
+      "tic": 0.36,
+      "fundSizeZarMillions": 6850,
+      "distributionFrequency": "Semi-Annual",
+      "dividendYield": 1.25,
+      "returns": {
+        "oneYear": 24.8,
+        "threeYearAnnualized": 17.5,
+        "fiveYearAnnualized": 16.2
+      },
+      "riskRating": "Aggressive / High",
+      "top10Holdings": [
+        { "name": "Microsoft Corp", "weight": 4.4 },
+        { "name": "Apple Inc", "weight": 4.1 },
+        { "name": "NVIDIA Corp", "weight": 3.9 },
+        { "name": "Amazon.com Inc", "weight": 2.6 },
+        { "name": "Meta Platforms Class A", "weight": 1.7 },
+        { "name": "Alphabet Inc Class A", "weight": 1.5 },
+        { "name": "Alphabet Inc Class C", "weight": 1.3 },
+        { "name": "Broadcom Inc", "weight": 1.1 },
+        { "name": "Eli Lilly and Co", "weight": 1.0 },
+        { "name": "Tesla Inc", "weight": 0.9 }
+      ],
+      "sectors": [
+        { "name": "Information Technology", "weight": 24.2 },
+        { "name": "Financials", "weight": 15.1 },
+        { "name": "Healthcare", "weight": 11.8 },
+        { "name": "Industrials", "weight": 11.1 },
+        { "name": "Consumer Discretionary", "weight": 10.5 },
+        { "name": "Communication Services", "weight": 7.4 },
+        { "name": "Other Sectors", "weight": 19.9 }
+      ],
+      "geography": [
+        { "region": "United States", "weight": 70.8 },
+        { "region": "Japan", "weight": 5.8 },
+        { "region": "United Kingdom", "weight": 3.9 },
+        { "region": "France", "weight": 3.1 },
+        { "region": "Canada", "weight": 3.0 },
+        { "region": "Other Developed", "weight": 13.4 }
+      ],
+      "whyItRanks": "The benchmark core foundation for South African long-term TFSA investors. Delivers seamless developed world diversification across 23 countries and acts as a fortress Rand hedge.",
+      "pros": [
+        "Broad global developed diversification (1,400+ stocks)",
+        "Zero capital gains tax and dividend tax in TFSA",
+        "Deep trading liquidity on the JSE"
+      ],
+      "risks": [
+        "Excludes emerging market economies",
+        "High 71% exposure to the US tech sector",
+        "Feeder fund wrapper incurs 0.35% TER"
+      ],
+      "idealInvestor": "Long-term investors seeking an all-in-one offshore equity anchor with built-in currency depreciation defense."
+    },
+    {
+      "id": "syg500",
+      "ticker": "SYG500",
+      "isin": "ZAE000251377",
+      "name": "Sygnia Itrix S&P 500 ETF",
+      "issuer": "Sygnia Itrix",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "S&P 500 Index (Net Total Return)",
+      "underlyingAsset": "Direct Physical S&P 500 Index Replication",
+      "category": "US Large-Cap",
+      "assetClass": "US Equity",
+      "inceptionDate": "2017-10-30",
+      "ter": 0.19,
+      "tc": 0.00,
+      "tic": 0.19,
+      "fundSizeZarMillions": 5420,
+      "distributionFrequency": "Semi-Annual",
+      "dividendYield": 1.15,
+      "returns": {
+        "oneYear": 28.6,
+        "threeYearAnnualized": 19.8,
+        "fiveYearAnnualized": 18.4
+      },
+      "riskRating": "Aggressive / High",
+      "top10Holdings": [
+        { "name": "Apple Inc", "weight": 7.1 },
+        { "name": "Microsoft Corp", "weight": 6.8 },
+        { "name": "NVIDIA Corp", "weight": 6.4 },
+        { "name": "Amazon.com Inc", "weight": 3.8 },
+        { "name": "Alphabet Inc Class A", "weight": 2.3 },
+        { "name": "Meta Platforms Class A", "weight": 2.2 },
+        { "name": "Berkshire Hathaway B", "weight": 1.8 },
+        { "name": "Alphabet Inc Class C", "weight": 1.8 },
+        { "name": "Eli Lilly and Co", "weight": 1.5 },
+        { "name": "Broadcom Inc", "weight": 1.4 }
+      ],
+      "sectors": [
+        { "name": "Information Technology", "weight": 31.5 },
+        { "name": "Financials", "weight": 13.2 },
+        { "name": "Healthcare", "weight": 11.6 },
+        { "name": "Consumer Discretionary", "weight": 10.1 },
+        { "name": "Communication Services", "weight": 9.0 },
+        { "name": "Industrials", "weight": 8.4 },
+        { "name": "Other Sectors", "weight": 14.2 }
+      ],
+      "geography": [
+        { "region": "United States", "weight": 100.0 }
+      ],
+      "whyItRanks": "Lowest TER US equity ETF on the JSE (0.19%). Maximizes compound returns inside a TFSA by pairing top-tier US corporate earnings with minimal management expense.",
+      "pros": [
+        "Unbeatable 0.19% TER for JSE-listed offshore equity",
+        "Tracks the 500 strongest corporate balance sheets globally",
+        "Physical index replication without complex derivatives"
+      ],
+      "risks": [
+        "100% geographic concentration in the US",
+        "Heavy tech concentration with Magnificent 7 >30% weight",
+        "Valuation multiple contraction vulnerability"
+      ],
+      "idealInvestor": "Cost-conscious growth investors who want maximum compounding power focused strictly on the US economy."
+    },
+    {
+      "id": "global",
+      "ticker": "GLOBAL",
+      "isin": "ZAE000297776",
+      "name": "10X Total World Stock Feeder ETF",
+      "issuer": "10X Investments",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "FTSE Global All Cap Index",
+      "underlyingAsset": "Vanguard Total World Stock ETF (VT)",
+      "category": "All-World Global",
+      "assetClass": "Global Equity",
+      "inceptionDate": "2021-04-14",
+      "ter": 0.25,
+      "tc": -0.01,
+      "tic": 0.24,
+      "fundSizeZarMillions": 2669,
+      "distributionFrequency": "Semi-Annual",
+      "dividendYield": 1.70,
+      "returns": {
+        "oneYear": 23.5,
+        "threeYearAnnualized": 15.9,
+        "fiveYearAnnualized": 14.8
+      },
+      "riskRating": "Aggressive / High",
+      "top10Holdings": [
+        { "name": "Microsoft Corp", "weight": 3.9 },
+        { "name": "Apple Inc", "weight": 3.7 },
+        { "name": "NVIDIA Corp", "weight": 3.5 },
+        { "name": "Amazon.com Inc", "weight": 2.3 },
+        { "name": "Meta Platforms Class A", "weight": 1.5 },
+        { "name": "Alphabet Inc Class A", "weight": 1.3 },
+        { "name": "Alphabet Inc Class C", "weight": 1.1 },
+        { "name": "Taiwan Semiconductor (TSMC)", "weight": 1.0 },
+        { "name": "Broadcom Inc", "weight": 0.9 },
+        { "name": "Eli Lilly and Co", "weight": 0.8 }
+      ],
+      "sectors": [
+        { "name": "Technology", "weight": 23.8 },
+        { "name": "Financials", "weight": 15.6 },
+        { "name": "Industrials", "weight": 11.4 },
+        { "name": "Healthcare", "weight": 11.2 },
+        { "name": "Consumer Discretionary", "weight": 10.3 },
+        { "name": "Other Sectors", "weight": 27.7 }
+      ],
+      "geography": [
+        { "region": "North America", "weight": 63.2 },
+        { "region": "Europe", "weight": 15.4 },
+        { "region": "Emerging Markets", "weight": 10.5 },
+        { "region": "Pacific Developed", "weight": 9.8 },
+        { "region": "Middle East / Africa", "weight": 1.1 }
+      ],
+      "whyItRanks": "The ultimate 'buy everything on earth' vehicle on the JSE. Holds over 9,000 stocks spanning developed and emerging markets, backed by Vanguard's world-class scale at only 0.25% TER.",
+      "pros": [
+        "Extreme diversification: >9,000 large, mid & small-cap stocks",
+        "Direct feeder into Vanguard VT with 0.25% low TER",
+        "Includes emerging markets (Taiwan, India, China) naturally"
+      ],
+      "risks": [
+        "Slightly lower US weight can lag pure S&P 500 in US tech rallies",
+        "Feeder fund tax reporting nuances"
+      ],
+      "idealInvestor": "Passive 'Boglehead' investors who believe in true global capitalism and don't want to bet on any single country."
+    },
+    {
+      "id": "stxndq",
+      "ticker": "STXNDQ",
+      "isin": "ZAE000256327",
+      "name": "Satrix Nasdaq 100 Feeder ETF",
+      "issuer": "Satrix",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "Nasdaq-100 Index",
+      "underlyingAsset": "Invesco EQQQ / iShares Nasdaq 100 UCITS ETF",
+      "category": "US Tech / Growth",
+      "assetClass": "Global Growth Equity",
+      "inceptionDate": "2018-04-10",
+      "ter": 0.48,
+      "tc": 0.00,
+      "tic": 0.48,
+      "fundSizeZarMillions": 11200,
+      "distributionFrequency": "Semi-Annual",
+      "dividendYield": 0.55,
+      "returns": {
+        "oneYear": 34.5,
+        "threeYearAnnualized": 23.6,
+        "fiveYearAnnualized": 22.4
+      },
+      "riskRating": "Very High / Aggressive",
+      "top10Holdings": [
+        { "name": "Apple Inc", "weight": 8.9 },
+        { "name": "Microsoft Corp", "weight": 8.3 },
+        { "name": "NVIDIA Corp", "weight": 7.8 },
+        { "name": "Amazon.com Inc", "weight": 5.1 },
+        { "name": "Broadcom Inc", "weight": 4.3 },
+        { "name": "Meta Platforms Class A", "weight": 4.2 },
+        { "name": "Alphabet Inc Class A", "weight": 2.7 },
+        { "name": "Alphabet Inc Class C", "weight": 2.6 },
+        { "name": "Tesla Inc", "weight": 2.5 },
+        { "name": "Costco Wholesale", "weight": 2.4 }
+      ],
+      "sectors": [
+        { "name": "Technology", "weight": 50.8 },
+        { "name": "Communication Services", "weight": 15.3 },
+        { "name": "Consumer Discretionary", "weight": 13.4 },
+        { "name": "Consumer Staples", "weight": 6.3 },
+        { "name": "Healthcare", "weight": 6.2 },
+        { "name": "Industrials & Other", "weight": 8.0 }
+      ],
+      "geography": [
+        { "region": "United States", "weight": 97.5 },
+        { "region": "Other International", "weight": 2.5 }
+      ],
+      "whyItRanks": "The undisputed alpha leader of the past decade. Ranks #1 in 3Y and 5Y annualized returns on EasyEquities, capturing the explosive growth of artificial intelligence and digital scale.",
+      "pros": [
+        "Unrivaled historical capital appreciation (>22% 5Y CAGR)",
+        "Captures the epicenter of global AI & cloud innovation",
+        "Over R11bn AUM with massive daily liquidity"
+      ],
+      "risks": [
+        "Highest TER in the lineup at 0.48%",
+        "High volatility and sharp drawdowns during interest rate shocks",
+        "Minimal dividend yield (0.55%)"
+      ],
+      "idealInvestor": "Growth-focused investors with a 7+ year horizon willing to tolerate drawdowns for supreme compound returns."
+    },
+    {
+      "id": "stx40",
+      "ticker": "STX40",
+      "isin": "ZAE000027108",
+      "name": "Satrix 40 ETF",
+      "issuer": "Satrix",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "FTSE/JSE Top 40 Index",
+      "underlyingAsset": "Direct Physical Top 40 Equity Portfolio",
+      "category": "South Africa Large-Cap",
+      "assetClass": "Domestic SA Equity",
+      "inceptionDate": "2000-11-27",
+      "ter": 0.10,
+      "tc": 0.02,
+      "tic": 0.12,
+      "fundSizeZarMillions": 14200,
+      "distributionFrequency": "Quarterly",
+      "dividendYield": 3.45,
+      "returns": {
+        "oneYear": 14.2,
+        "threeYearAnnualized": 11.8,
+        "fiveYearAnnualized": 11.5
+      },
+      "riskRating": "Moderate / High",
+      "top10Holdings": [
+        { "name": "Naspers Ltd", "weight": 11.8 },
+        { "name": "Prosus NV", "weight": 8.4 },
+        { "name": "FirstRand Ltd", "weight": 6.2 },
+        { "name": "Gold Fields Ltd", "weight": 5.1 },
+        { "name": "Anglo American plc", "weight": 4.9 },
+        { "name": "Standard Bank Group", "weight": 4.4 },
+        { "name": "Capitec Bank Holdings", "weight": 4.1 },
+        { "name": "Sanlam Ltd", "weight": 3.7 },
+        { "name": "Bid Corporation", "weight": 3.2 },
+        { "name": "MTN Group Ltd", "weight": 3.0 }
+      ],
+      "sectors": [
+        { "name": "Financials", "weight": 34.5 },
+        { "name": "Basic Materials & Mining", "weight": 23.4 },
+        { "name": "Technology (Prosus/Naspers)", "weight": 20.2 },
+        { "name": "Consumer Staples", "weight": 11.2 },
+        { "name": "Telecommunications", "weight": 6.1 },
+        { "name": "Other Sectors", "weight": 4.6 }
+      ],
+      "geography": [
+        { "region": "South Africa (Local & Dual-Listed)", "weight": 100.0 }
+      ],
+      "whyItRanks": "The lowest-cost index fund in South Africa with an incredible 0.10% TER. Offers substantial dividend yield (3.45%) and dual-listed international revenue via Prosus, Naspers, and global miners.",
+      "pros": [
+        "Unbeatable 0.10% TER rock-bottom fee",
+        "Quarterly cash dividend distributions (3.45% yield)",
+        "Over 60% of revenues derived internationally despite JSE listing"
+      ],
+      "risks": [
+        "Vulnerable to South African sovereign and macro headwinds",
+        "High concentration in Naspers/Prosus complex (>20%)"
+      ],
+      "idealInvestor": "South African investors seeking pure low-cost core domestic equity exposure with generous dividend cash flows."
+    },
+    {
+      "id": "stxemg",
+      "ticker": "STXEMG",
+      "isin": "ZAE000246120",
+      "name": "Satrix MSCI Emerging Markets Feeder ETF",
+      "issuer": "Satrix",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "MSCI Emerging Markets Index",
+      "underlyingAsset": "iShares MSCI Emerging Markets UCITS ETF",
+      "category": "Emerging Markets",
+      "assetClass": "Global EM Equity",
+      "inceptionDate": "2017-07-25",
+      "ter": 0.40,
+      "tc": 0.00,
+      "tic": 0.40,
+      "fundSizeZarMillions": 1820,
+      "distributionFrequency": "Semi-Annual",
+      "dividendYield": 2.30,
+      "returns": {
+        "oneYear": 15.2,
+        "threeYearAnnualized": 7.4,
+        "fiveYearAnnualized": 6.1
+      },
+      "riskRating": "Very High / Aggressive",
+      "top10Holdings": [
+        { "name": "Taiwan Semiconductor (TSMC)", "weight": 9.8 },
+        { "name": "Tencent Holdings", "weight": 4.5 },
+        { "name": "Samsung Electronics", "weight": 3.8 },
+        { "name": "Alibaba Group Holding", "weight": 2.4 },
+        { "name": "Reliance Industries", "weight": 1.5 },
+        { "name": "SK Hynix", "weight": 1.4 },
+        { "name": "ICICI Bank", "weight": 1.1 },
+        { "name": "Meituan", "weight": 1.0 },
+        { "name": "Infosys Ltd", "weight": 0.9 },
+        { "name": "China Construction Bank", "weight": 0.9 }
+      ],
+      "sectors": [
+        { "name": "Information Technology", "weight": 24.5 },
+        { "name": "Financials", "weight": 22.4 },
+        { "name": "Consumer Discretionary", "weight": 12.8 },
+        { "name": "Communication Services", "weight": 8.6 },
+        { "name": "Materials", "weight": 6.9 },
+        { "name": "Other Sectors", "weight": 24.8 }
+      ],
+      "geography": [
+        { "region": "China", "weight": 24.5 },
+        { "region": "Taiwan", "weight": 19.8 },
+        { "region": "India", "weight": 18.2 },
+        { "region": "South Korea", "weight": 11.4 },
+        { "region": "Brazil", "weight": 4.8 },
+        { "region": "Other EM", "weight": 21.3 }
+      ],
+      "whyItRanks": "Essential geographic counterbalance to US hegemony. Holds a monopoly on cutting-edge global chip fabrication via TSMC (9.8%) and captures high-GDP demographic growth in India and Southeast Asia.",
+      "pros": [
+        "Nearly 10% direct allocation to semiconductor king TSMC",
+        "Direct participation in the fast-growing Indian financial and industrial expansion",
+        "Substantially lower price-to-earnings valuations than Western indices"
+      ],
+      "risks": [
+        "Geopolitical instability across the Taiwan Strait and US-China tensions",
+        "Emerging market currency depreciation against the USD"
+      ],
+      "idealInvestor": "Long-range tactical investors looking to balance US-heavy portfolios with Asian technological and economic tailwinds."
+    },
+    {
+      "id": "stxdiv",
+      "ticker": "STXDIV",
+      "isin": "ZAE000102018",
+      "name": "Satrix Divi Plus ETF",
+      "issuer": "Satrix",
+      "account": "ZAR",
+      "accountType": "EasyEquities ZAR (JSE)",
+      "tfsaEligible": true,
+      "benchmark": "FTSE/JSE Dividend Plus Index (J259)",
+      "underlyingAsset": "Top 30 High Dividend Yielding JSE Equities",
+      "category": "Dividend & Income",
+      "assetClass": "Domestic Income Equity",
+      "inceptionDate": "2007-08-29",
+      "ter": 0.44,
+      "tc": 0.11,
+      "tic": 0.55,
+      "fundSizeZarMillions": 780,
+      "distributionFrequency": "Quarterly",
+      "dividendYield": 6.20,
+      "returns": {
+        "oneYear": 18.8,
+        "threeYearAnnualized": 12.9,
+        "fiveYearAnnualized": 13.4
+      },
+      "riskRating": "Moderate / High",
+      "top10Holdings": [
+        { "name": "British American Tobacco", "weight": 5.8 },
+        { "name": "Standard Bank Group", "weight": 5.2 },
+        { "name": "Kumba Iron Ore", "weight": 4.9 },
+        { "name": "Vodacom Group", "weight": 4.7 },
+        { "name": "Nedbank Group", "weight": 4.5 },
+        { "name": "Exxaro Resources", "weight": 4.3 },
+        { "name": "Absa Group Ltd", "weight": 4.2 },
+        { "name": "African Rainbow Minerals", "weight": 3.8 },
+        { "name": "Truworths International", "weight": 3.6 },
+        { "name": "Sasol Ltd", "weight": 3.4 }
+      ],
+      "sectors": [
+        { "name": "Financials & Banking", "weight": 38.2 },
+        { "name": "Mining & Resources", "weight": 26.5 },
+        { "name": "Consumer Goods & Retail", "weight": 16.8 },
+        { "name": "Telecommunications", "weight": 12.4 },
+        { "name": "Industrials", "weight": 6.1 }
+      ],
+      "geography": [
+        { "region": "South Africa", "weight": 100.0 }
+      ],
+      "whyItRanks": "The top-yielding income fund on EasyEquities with an impressive ~6.20% dividend yield. In a TFSA, 100% of this dividend stream is exempt from the 20% Dividend Withholding Tax.",
+      "pros": [
+        "Outstanding 6.20% cash distribution yield paid quarterly",
+        "100% tax-free income compounding inside an EasyEquities TFSA",
+        "Deep value bias provides downside ballast during growth sell-offs"
+      ],
+      "risks": [
+        "Mining commodity cyclicality impacts payout stability",
+        "Lags high-beta tech funds during extended bull runs"
+      ],
+      "idealInvestor": "Retirees, income seekers, or dividend-reinvestment champions aiming to generate compounding cash flow."
+    },
+    {
+      "id": "voo",
+      "ticker": "VOO",
+      "isin": "US9229083632",
+      "name": "Vanguard S&P 500 ETF",
+      "issuer": "Vanguard",
+      "account": "USD",
+      "accountType": "EasyEquities USD (DriveWealth)",
+      "tfsaEligible": false,
+      "benchmark": "S&P 500 Index (USD)",
+      "underlyingAsset": "Direct Full Physical US Equity Indexation",
+      "category": "US Large-Cap (USD)",
+      "assetClass": "US Equity",
+      "inceptionDate": "2010-09-07",
+      "ter": 0.03,
+      "tc": 0.00,
+      "tic": 0.03,
+      "fundSizeZarMillions": 9250000,
+      "distributionFrequency": "Quarterly",
+      "dividendYield": 1.25,
+      "returns": {
+        "oneYear": 24.5,
+        "threeYearAnnualized": 11.8,
+        "fiveYearAnnualized": 15.2
+      },
+      "riskRating": "Aggressive / High",
+      "top10Holdings": [
+        { "name": "Apple Inc", "weight": 7.2 },
+        { "name": "Microsoft Corp", "weight": 6.9 },
+        { "name": "NVIDIA Corp", "weight": 6.5 },
+        { "name": "Amazon.com Inc", "weight": 3.8 },
+        { "name": "Meta Platforms Class A", "weight": 2.3 },
+        { "name": "Alphabet Inc Class A", "weight": 2.1 },
+        { "name": "Berkshire Hathaway B", "weight": 1.8 },
+        { "name": "Alphabet Inc Class C", "weight": 1.7 },
+        { "name": "Broadcom Inc", "weight": 1.6 },
+        { "name": "Tesla Inc", "weight": 1.4 }
+      ],
+      "sectors": [
+        { "name": "Information Technology", "weight": 31.8 },
+        { "name": "Financials", "weight": 13.0 },
+        { "name": "Healthcare", "weight": 11.5 },
+        { "name": "Consumer Discretionary", "weight": 10.2 },
+        { "name": "Communication Services", "weight": 9.1 },
+        { "name": "Industrials", "weight": 8.3 },
+        { "name": "Other Sectors", "weight": 16.1 }
+      ],
+      "geography": [
+        { "region": "United States", "weight": 100.0 }
+      ],
+      "whyItRanks": "The gold standard of world investing. Offered directly in the EasyEquities USD account with a rock-bottom 0.03% expense ratio, saving substantial fees over feeder funds for long-term dollar holdings.",
+      "pros": [
+        "Unbeatable 0.03% expense ratio (saves ~0.16% vs local feeder)",
+        "Direct USD ownership with zero currency conversion drag once in USD",
+        "Vanguard non-profit mutually owned fund management pedigree"
+      ],
+      "risks": [
+        "Non-TFSA eligible (capital gains and dividend tax apply)",
+        "Subject to US Estate Tax / Situs regulations if US assets exceed $60,000"
+      ],
+      "idealInvestor": "International family members or investors holding USD directly who want the purest, cheapest long-term equity allocation."
+    },
+    {
+      "id": "qqq",
+      "ticker": "QQQ",
+      "isin": "US46090E1038",
+      "name": "Invesco QQQ Trust",
+      "issuer": "Invesco",
+      "account": "USD",
+      "accountType": "EasyEquities USD (DriveWealth)",
+      "tfsaEligible": false,
+      "benchmark": "Nasdaq-100 Index (USD)",
+      "underlyingAsset": "Top 100 Non-Financial Nasdaq Equities",
+      "category": "US Tech / Growth (USD)",
+      "assetClass": "US Tech Growth",
+      "inceptionDate": "1999-03-10",
+      "ter": 0.20,
+      "tc": 0.00,
+      "tic": 0.20,
+      "fundSizeZarMillions": 5300000,
+      "distributionFrequency": "Quarterly",
+      "dividendYield": 0.58,
+      "returns": {
+        "oneYear": 29.8,
+        "threeYearAnnualized": 14.5,
+        "fiveYearAnnualized": 19.2
+      },
+      "riskRating": "Very High / Aggressive",
+      "top10Holdings": [
+        { "name": "Apple Inc", "weight": 8.8 },
+        { "name": "Microsoft Corp", "weight": 8.2 },
+        { "name": "NVIDIA Corp", "weight": 7.9 },
+        { "name": "Amazon.com Inc", "weight": 5.2 },
+        { "name": "Broadcom Inc", "weight": 4.4 },
+        { "name": "Meta Platforms Class A", "weight": 4.2 },
+        { "name": "Alphabet Inc Class A", "weight": 2.8 },
+        { "name": "Alphabet Inc Class C", "weight": 2.6 },
+        { "name": "Tesla Inc", "weight": 2.5 },
+        { "name": "Costco Wholesale", "weight": 2.4 }
+      ],
+      "sectors": [
+        { "name": "Technology", "weight": 51.2 },
+        { "name": "Communication Services", "weight": 15.4 },
+        { "name": "Consumer Discretionary", "weight": 13.2 },
+        { "name": "Consumer Staples", "weight": 6.2 },
+        { "name": "Healthcare", "weight": 6.0 },
+        { "name": "Industrials & Other", "weight": 8.0 }
+      ],
+      "geography": [
+        { "region": "United States", "weight": 97.6 },
+        { "region": "International", "weight": 2.4 }
+      ],
+      "whyItRanks": "The benchmark instrument for global technological leadership. At 0.20% TER, it is less than half the cost of local JSE Nasdaq feeders (0.48%), making it the superior growth vehicle in a USD account.",
+      "pros": [
+        "0.20% TER (saves 0.28% annually over STXNDQ)",
+        "Massive global liquidity and tightest possible bid-ask spreads",
+        "Direct beneficiary of the generative AI and enterprise cloud revolutions"
+      ],
+      "risks": [
+        "High valuations and sensitivity to interest rate policy",
+        "Heavy tech concentration with no financial safety net"
+      ],
+      "idealInvestor": "Offshore investors seeking maximum capital growth powered by the world's most dominant tech corporations."
+    },
+    {
+      "id": "vt",
+      "ticker": "VT",
+      "isin": "US9220427424",
+      "name": "Vanguard Total World Stock ETF",
+      "issuer": "Vanguard",
+      "account": "USD",
+      "accountType": "EasyEquities USD (DriveWealth)",
+      "tfsaEligible": false,
+      "benchmark": "FTSE Global All Cap Index",
+      "underlyingAsset": "Direct Full Global Market Capitalization Portfolio",
+      "category": "All-World Global (USD)",
+      "assetClass": "Global All-Cap Equity",
+      "inceptionDate": "2008-06-24",
+      "ter": 0.07,
+      "tc": 0.00,
+      "tic": 0.07,
+      "fundSizeZarMillions": 780000,
+      "distributionFrequency": "Quarterly",
+      "dividendYield": 1.85,
+      "returns": {
+        "oneYear": 19.4,
+        "threeYearAnnualized": 8.2,
+        "fiveYearAnnualized": 11.8
+      },
+      "riskRating": "Aggressive / High",
+      "top10Holdings": [
+        { "name": "Microsoft Corp", "weight": 4.0 },
+        { "name": "Apple Inc", "weight": 3.8 },
+        { "name": "NVIDIA Corp", "weight": 3.6 },
+        { "name": "Amazon.com Inc", "weight": 2.3 },
+        { "name": "Meta Platforms Class A", "weight": 1.5 },
+        { "name": "Alphabet Inc Class A", "weight": 1.3 },
+        { "name": "Alphabet Inc Class C", "weight": 1.1 },
+        { "name": "Taiwan Semiconductor (TSMC)", "weight": 1.0 },
+        { "name": "Broadcom Inc", "weight": 0.9 },
+        { "name": "Eli Lilly and Co", "weight": 0.8 }
+      ],
+      "sectors": [
+        { "name": "Technology", "weight": 24.0 },
+        { "name": "Financials", "weight": 15.8 },
+        { "name": "Industrials", "weight": 11.5 },
+        { "name": "Healthcare", "weight": 11.1 },
+        { "name": "Consumer Discretionary", "weight": 10.2 },
+        { "name": "Other Sectors", "weight": 27.4 }
+      ],
+      "geography": [
+        { "region": "North America", "weight": 63.5 },
+        { "region": "Europe", "weight": 15.2 },
+        { "region": "Emerging Markets", "weight": 10.6 },
+        { "region": "Pacific Developed", "weight": 9.6 },
+        { "region": "Middle East / Other", "weight": 1.1 }
+      ],
+      "whyItRanks": "The benchmark 'hold the entire world' investment. For just 0.07% TER, you own over 9,800 public companies across 50 countries without needing to rebalance or predict regional winners.",
+      "pros": [
+        "Only 0.07% TER for unmatched worldwide coverage",
+        "Owns 9,800+ stocks in developed and emerging economies",
+        "Eliminates single-country geopolitical and currency risk"
+      ],
+      "risks": [
+        "Moderate returns during periods when the US outperforms the rest of the world",
+        "Non-TFSA eligible on EasyEquities US"
+      ],
+      "idealInvestor": "The purist global investor who wants complete peace of mind, holding the global economy at negligible cost."
+    }
+  ]
+}

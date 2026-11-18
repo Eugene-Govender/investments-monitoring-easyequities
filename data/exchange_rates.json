@@ -1,0 +1,9 @@
+{
+  "base": "USD",
+  "rates": {
+    "ZAR": 18.25,
+    "USD": 1.00
+  },
+  "lastUpdated": "2026-11-17T20:00:00Z",
+  "source": "South African Reserve Bank / Forex Market Interbank Reference"
+}
