@@ -1,19 +1,52 @@
-import React from 'react';
-import { Activity, Globe, DollarSign, TrendingUp, BookOpen } from 'lucide-react';
-import { METADATA, RATES } from '../data/etfService.js';
+import React, { useState } from 'react';
+import { Activity, Globe, DollarSign, TrendingUp, BookOpen, RefreshCw, Search, CheckCircle } from 'lucide-react';
+import { METADATA, RATES, fetchLiveUSDZAR, getCurrentUSDZAR } from '../data/etfService.js';
 
 const NAV_VIEWS = [
   { id: 'overview', label: 'Command Overview' },
   { id: 'comparator', label: 'Fund Comparator' },
 ];
 
-export default function Navbar({ view, setView, currency, setCurrency, onOpenTutorial }) {
+export default function Navbar({ view, setView, currency, setCurrency, onOpenTutorial, onOpenExplorer, onDataRefreshed }) {
+  const [isUpdating, setIsUpdating] = useState(false);
+  const [updateMsg, setUpdateMsg] = useState('');
+  const [currentRate, setCurrentRate] = useState(getCurrentUSDZAR());
+
   const now = new Date();
   const timeStr = now.toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   const dateStr = now.toLocaleDateString('en-ZA', { day: '2-digit', month: 'short', year: 'numeric' });
 
+  async function handleUpdateAll() {
+    setIsUpdating(true);
+    setUpdateMsg('Updating live forex and synchronizing data...');
+
+    // 1. Fetch live exchange rate
+    const res = await fetchLiveUSDZAR();
+    if (res.rate) {
+      setCurrentRate(res.rate);
+    }
+
+    // 2. Simulate refresh delay for smooth visual feedback
+    setTimeout(() => {
+      setIsUpdating(false);
+      setUpdateMsg(`Updated! Live USD/ZAR = R${res.rate.toFixed(2)} (${res.timestamp})`);
+      if (onDataRefreshed) onDataRefreshed(res.rate);
+
+      // Clear toast after 4s
+      setTimeout(() => setUpdateMsg(''), 4000);
+    }, 800);
+  }
+
   return (
-    <header className="sticky top-0 z-50 w-full" style={{ background: 'rgba(6, 8, 14, 0.92)', borderBottom: '1px solid rgba(0, 242, 254, 0.12)', backdropFilter: 'blur(20px)' }}>
+    <header className="sticky top-0 z-50 w-full" style={{ background: 'rgba(6, 8, 14, 0.94)', borderBottom: '1px solid rgba(0, 242, 254, 0.12)', backdropFilter: 'blur(20px)' }}>
+      {/* Toast notification banner */}
+      {updateMsg && (
+        <div className="w-full py-1.5 px-4 text-center text-xs font-mono font-bold flex items-center justify-center gap-2 transition-all" style={{ background: 'linear-gradient(90deg, rgba(0,242,254,0.15), rgba(5,255,161,0.2), rgba(0,242,254,0.15))', borderBottom: '1px solid rgba(5,255,161,0.3)', color: '#05ffa1' }}>
+          <CheckCircle className="w-3.5 h-3.5" />
+          <span>{updateMsg}</span>
+        </div>
+      )}
+
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4 flex-wrap">
 
         {/* Brand */}
@@ -48,19 +81,12 @@ export default function Navbar({ view, setView, currency, setCurrency, onOpenTut
         </nav>
 
         {/* Right controls */}
-        <div className="flex items-center gap-3">
-          {/* Live status */}
-          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(5,255,161,0.06)', border: '1px solid rgba(5,255,161,0.15)' }}>
-            <span className="pulse-dot" />
-            <span className="text-[10px] font-mono text-slate-400">LIVE</span>
-            <span className="text-[10px] font-mono text-slate-500 hidden md:block">· {dateStr} · {timeStr}</span>
-          </div>
-
+        <div className="flex items-center gap-2.5 flex-wrap">
           {/* USD/ZAR rate badge */}
-          <div className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(0,242,254,0.06)', border: '1px solid rgba(0,242,254,0.12)' }}>
+          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(0,242,254,0.06)', border: '1px solid rgba(0,242,254,0.12)' }}>
             <Globe className="w-3 h-3" style={{ color: '#00f2fe' }} />
             <span className="text-[10px] font-mono text-slate-400">USD/ZAR</span>
-            <span className="text-[10px] font-mono text-glow-cyan font-bold" style={{ color: '#00f2fe' }}>{RATES.rates.ZAR}</span>
+            <span className="text-[10px] font-mono text-glow-cyan font-bold" style={{ color: '#00f2fe' }}>{currentRate.toFixed(2)}</span>
           </div>
 
           {/* Currency Toggle */}
@@ -83,15 +109,46 @@ export default function Navbar({ view, setView, currency, setCurrency, onOpenTut
             ))}
           </div>
 
+          {/* Update All Button */}
+          <button
+            onClick={handleUpdateAll}
+            disabled={isUpdating}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition-all hover:scale-105 active:scale-95"
+            style={{
+              background: isUpdating ? 'rgba(255,255,255,0.08)' : 'rgba(5,255,161,0.12)',
+              border: '1px solid rgba(5,255,161,0.35)',
+              color: '#05ffa1',
+              boxShadow: isUpdating ? 'none' : '0 0 12px rgba(5,255,161,0.2)'
+            }}
+            title="Fetch live rates and refresh dashboard"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${isUpdating ? 'animate-spin' : ''}`} />
+            <span className="hidden sm:inline">{isUpdating ? 'Syncing...' : 'Update All'}</span>
+          </button>
+
+          {/* Find Any ETF Button */}
+          <button
+            onClick={onOpenExplorer}
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold transition-all hover:scale-105 text-[#06080e]"
+            style={{
+              background: 'linear-gradient(135deg, #00f2fe, #05ffa1)',
+              boxShadow: '0 0 16px rgba(0,242,254,0.35)'
+            }}
+            title="Search any ETF and check if available on EasyEquities"
+          >
+            <Search className="w-3.5 h-3.5" />
+            <span>Find Any ETF</span>
+          </button>
+
           {/* Tutorial / Help button */}
           <button
             onClick={onOpenTutorial}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all hover:scale-105"
-            style={{ background: 'rgba(0,242,254,0.08)', border: '1px solid rgba(0,242,254,0.25)', color: '#00f2fe' }}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-semibold transition-all hover:bg-white/5 text-slate-400 hover:text-slate-200"
+            style={{ border: '1px solid rgba(255,255,255,0.1)' }}
             title="Open Tutorial"
           >
             <BookOpen className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Help</span>
+            <span className="hidden md:inline">Help</span>
           </button>
         </div>
 

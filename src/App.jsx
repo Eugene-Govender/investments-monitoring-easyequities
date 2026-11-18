@@ -1,18 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar.jsx';
 import CommandOverview from './components/CommandOverview.jsx';
 import ETFMatrix from './components/ETFMatrix.jsx';
 import FundComparator from './components/FundComparator.jsx';
 import FundModal from './components/FundModal.jsx';
 import TutorialModal from './components/TutorialModal.jsx';
-import { ALL_ETFS, METADATA } from './data/etfService.js';
+import ETFExplorerModal from './components/ETFExplorerModal.jsx';
+import { getActiveETFs, METADATA, RATES } from './data/etfService.js';
 
 export default function App() {
+  const [etfs, setEtfs] = useState(getActiveETFs());
   const [view, setView] = useState('overview');
   const [currency, setCurrency] = useState('ZAR');
   const [selectedETF, setSelectedETF] = useState(null);
   const [compareIds, setCompareIds] = useState([]);
-  const [showTutorial, setShowTutorial] = useState(true); // auto-open on first load
+  const [showTutorial, setShowTutorial] = useState(false);
+  const [showExplorer, setShowExplorer] = useState(false);
+  const [refreshTick, setRefreshTick] = useState(0);
+
+  // Check if first-time user for tutorial
+  useEffect(() => {
+    try {
+      const hasSeen = localStorage.getItem('easyequities_seen_tutorial_v1');
+      if (!hasSeen) {
+        setShowTutorial(true);
+      }
+    } catch {}
+  }, []);
+
+  function handleCloseTutorial() {
+    setShowTutorial(false);
+    try {
+      localStorage.setItem('easyequities_seen_tutorial_v1', 'true');
+    } catch {}
+  }
+
+  function handleETFAdded(newETF) {
+    // Refresh active ETF list
+    setEtfs(getActiveETFs());
+  }
+
+  function handleDataRefreshed(newRate) {
+    setRefreshTick(t => t + 1);
+    setEtfs(getActiveETFs());
+  }
 
   function toggleCompare(id) {
     setCompareIds(prev => {
@@ -29,7 +60,15 @@ export default function App() {
   return (
     <div className="min-h-screen cyber-grid" style={{ background: '#06080e', fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       {/* Top navigation bar */}
-      <Navbar view={view} setView={setView} currency={currency} setCurrency={setCurrency} onOpenTutorial={() => setShowTutorial(true)} />
+      <Navbar
+        view={view}
+        setView={setView}
+        currency={currency}
+        setCurrency={setCurrency}
+        onOpenTutorial={() => setShowTutorial(true)}
+        onOpenExplorer={() => setShowExplorer(true)}
+        onDataRefreshed={handleDataRefreshed}
+      />
 
       {/* Main content */}
       <main className="max-w-[1600px] mx-auto px-4 sm:px-6 py-8">
@@ -40,7 +79,7 @@ export default function App() {
             <div className="flex items-center gap-3 flex-wrap">
               <span className="text-xs font-mono text-slate-400">Compare selection:</span>
               {compareIds.map(id => {
-                const etf = ALL_ETFS.find(e => e.id === id);
+                const etf = etfs.find(e => e.id === id);
                 return etf ? (
                   <span key={id} className="font-mono text-xs font-bold px-2 py-0.5 rounded-md" style={{ color: '#00f2fe', background: 'rgba(0,242,254,0.1)', border: '1px solid rgba(0,242,254,0.25)' }}>{etf.ticker}</span>
                 ) : null;
@@ -70,12 +109,12 @@ export default function App() {
         {view === 'overview' && (
           <>
             <CommandOverview
-              etfs={ALL_ETFS}
+              etfs={etfs}
               currency={currency}
               onSelectETF={handleSelectETF}
             />
             <ETFMatrix
-              etfs={ALL_ETFS}
+              etfs={etfs}
               currency={currency}
               onSelectETF={handleSelectETF}
               selectedForCompare={compareIds}
@@ -88,7 +127,7 @@ export default function App() {
         {view === 'comparator' && (
           <FundComparator
             initialIds={compareIds}
-            allETFs={ALL_ETFS}
+            allETFs={etfs}
             currency={currency}
             onSelectETF={handleSelectETF}
           />
@@ -104,7 +143,7 @@ export default function App() {
             For information purposes only — not financial advice
           </p>
           <p className="text-[10px] font-mono text-slate-700 mt-1">
-            Data sourced from Satrix, Sygnia, 10X Investments, Vanguard & Invesco Minimum Disclosure Documents
+            Data sourced from Satrix, Sygnia, 10X Investments, Vanguard, Invesco & EasyAssetManagement
           </p>
         </footer>
       </main>
@@ -120,7 +159,16 @@ export default function App() {
 
       {/* Tutorial Modal */}
       {showTutorial && (
-        <TutorialModal onClose={() => setShowTutorial(false)} />
+        <TutorialModal onClose={handleCloseTutorial} />
+      )}
+
+      {/* ETF Explorer & Availability Verifier Modal */}
+      {showExplorer && (
+        <ETFExplorerModal
+          activeETFs={etfs}
+          onClose={() => setShowExplorer(false)}
+          onETFAdded={handleETFAdded}
+        />
       )}
     </div>
   );
