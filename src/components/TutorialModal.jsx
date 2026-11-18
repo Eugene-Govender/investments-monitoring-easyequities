@@ -339,7 +339,7 @@ const SLIDES = [
         <div className="rounded-xl p-3 text-xs" style={{ background: 'rgba(5,255,161,0.06)', border: '1px solid rgba(5,255,161,0.2)' }}>
           <div className="grid grid-cols-2 gap-2">
             {[
-              ['Annual Contribution Limit','R36,000 per year'],
+              ['Annual Contribution Limit','R46,000 per year (raised from R36k)'],
               ['Lifetime Limit','R500,000 total (cumulative)'],
               ['Capital Gains Tax','R0 — completely tax free'],
               ['Dividend Withholding Tax','R0 — completely tax free'],
